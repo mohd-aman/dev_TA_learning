@@ -1,0 +1,25 @@
+Bug: Exception in archive_methods.save_readability due to bytes string being passed to hint
+Bug: NOT NULL constraint failed: core_archiveresult.output when upgrading v0.4.24 archive to v0.6
+Bug: Cannot Provide Pocket API Url via Add UI
+Show prompt to update in Web UI when ArchiveBox version is out of date
+Add video subtitles/transcript to sonic full-text search index
+Refactor config loading system to use django-environ, python-decouple, dynaconf, or pydantic
+Feature Request: subdivide archive/ directory into subdirectories
+Feature Request: Create RSS feed of articles + text
+Question: How to archive 3d assets for the long term?
+Bug: SAVE_MEDIA=False config option not being respected, media still downloaded
+Feature Request: description/notes per entry?
+Question: Confluence Support?
+Feature Request: Lightweight rg configuration
+Documentation: document how to pull bookmarks from Firefox Sync
+Feature Request: Disable original preview
+Questions: Alternate title source, regex woes, updating single links, blacklisting updates, and piping lists to delete/remove links in Docker
+Bug: Fix merge_snapshots() creating a new snapshot dir instead of merging with an existing one during init and add --overwrite
+Feature Request: allow for importing WebScrapbook archives
+Add SNAPSHOT_ADD_STRATEGY=depth|breadth config flag to set archiving strategy
+Feature Request: Investigating using Stork and YACY as search backends/frontends
+Feature Request: Scheduling Archival from the UI
+Feature Request: Browser extension to submit either all history or certain URLs to a given ArchiveBox instance
+Feature Request: Rate-Limiting Options
+Feature Request: new extractor gallery-dl for image gallery downloading
+Feature Request: Import links directly from xBrowserSync

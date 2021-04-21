@@ -1,0 +1,25 @@
+Expire JWT page refers to outdated / discontinued packages
+Component communication
+Idea for a new bullet point
+update the translation for password hashing as it renamed and updated
+[Suggestion] Use a dedicated tool to help with the translations 
+Wrong code example at 3.3 Start a Codeblock's Curly Braces on the Same Line
+New Security BP Idea: If possible, avoid using password as authentication. Instead, rely on 3rd party services.
+Broken external links
+New BP idea: Protect against prototype pollution
+Best practice of using 'instanceof'
+[request] Is there any example Node App with these best practices implemented?
+Use Require status checks to pass before merging
+Add matching ESLint rules
+Vietnamese translation
+Spanish translation
+don't prettify bad examples :)
+Arabic Translation
+Basque translation
+Italian translation
+Adding to our security practices: Escape output, not input
+its very usefull but i hope people can give example project
+Managing express api version in a modular project structure
+don't agree with 3.9 ("Require modules by folders, as opposed to the files directly")
+[request] PDF version
+An idea: We should tag bullets

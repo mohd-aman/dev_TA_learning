@@ -1,0 +1,16 @@
+{
+  "name": "wcat_anirudh_bhaiyya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dcat": "script.js",
+    "pcat": "pcat.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

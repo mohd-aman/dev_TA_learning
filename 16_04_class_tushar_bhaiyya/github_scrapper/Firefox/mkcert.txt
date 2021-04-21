@@ -1,0 +1,25 @@
+Tablets 
+SSL_ERROR_RX_RECORD_TOO_LONG
+how to run on Windows 7(32bit)
+Uninstall fails to uninstall
+Notify if JAVA_HOME is not set
+[Question] mkcert vs cert-manager
+[Question] mkcert vs Lets Encrypt
+unable to use in virtualbox
+Instructions for generating certificates for MariaDB/ Postgres 
+Installing mkcert 
+Expiration 
+local CA not installed on firefox/chrome
+[FR] -days
+minimize CA root certificate lifetime
+Chrome ERR_CERT_VALIDITY_TOO_LONG error
+mkcert -install` fails to run on Arch based system
+Build mkcert release for Apple Silicon
+mkcert -install fails to install for Firefox on macOS
+Installing in firefox via snap on ubuntu doesn't seem to work
+failed to execute "security add-trusted-cert"
+brew install mkcert failed
+Cannot sign csr get panic error
+mkcert silently overwrites CSR file
+[feature] add Name Contraint?
+Installing in Firefox and/or Chrome/Chromium failed - xubunto

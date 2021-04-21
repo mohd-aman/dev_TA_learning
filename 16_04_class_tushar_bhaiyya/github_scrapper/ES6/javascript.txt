@@ -1,0 +1,25 @@
+Why is complexity set to 11 (or at all)?
+Import Declaration Newline Rules Confusing/Not Documented Correctly
+Should 'react/react-in-jsx-scope' be disabled by default if the new JSX transform is used.
+JSX is not displayed correctly in webpage
+README.md Performance section most of the urls return 503 error
+Configuration of react/jsx-no-bind allows to use arrow functions, while the style guide prohibits it
+What is the point of the "Types" section of the guide?
+Misleading documentation 10.8
+Non-Enforced Rules Should be Clearly Documented in the README.md
+Reconsider capIsNew: false for new-cap
+Rules for nullish coalescing and optional chaining
+max-classes-per-file enabled in code but not in docs
+Integrate "eslint-plugin-eslint-comments" plugin
+Include a Contributing.md to help newcomers to contribute
+Documentation conflicts with object-property-newline setting?
+ [suggestion]Add type-annotations to react/sort-comp
+Add support for TypeScript usage with typescript-eslint-parser
+Calling setState in componentDidUpdate
+[perf] disallow async/await
+A single preferred way for event methods prefix
+Add err and/or opts to the no-param-reassign exclusions?
+Shown Example Is Not Appropriate for arrays--callback-return
+separate event handler functions for an event attached to different inputs or one event handler function with lot of if statements/ switch statement?
+if statements are not checked for preceding newline
+(question) eslint rule / plugin for guideline 7.15

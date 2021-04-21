@@ -1,0 +1,25 @@
+New issue tracker is at https://github.com/uBlockOrigin/uBlock-issues/issues
+ublock dashboard not refresh filters list in real-time
+Thunderbird 60 support?
+Collapse placeholders for blacklisted domains
+Block sending Referrer information
+HTML filtering not working in GBK's webpage.
+HTML filtering breaks webpages of Shift_JIS encoding
+Add an "Import and Replace" button to the Whitelist tab
+"create" filter button disabled
+[Feature] Option to make dynamic rules use the page base domain for the rule source instead of the full hostname
+WebRTC filtering
+Element picker/zapper don't work if cosmetic filtering is disabled
+RFE: way to disable blocking temporarily (one page load or limited time)
+Logger always highlights first match
+Cannot inspect inside iframes with logger inspector
+[Firefox] Ability to completely disable WebRTC
+Support native filtering of |data:, |blob: [firefox-webext]
+Dynamic URL Filtering fails to override no-large-media
+[Feature Request] Naming Custom Filters
+Cleanup repo
+Static filtering: Cannot prevent my filter from strict-blocking
+Suggestion: make default 3rd party filters identifiable in dashboard
+Deactivating uBlock for single page on mobile devices is different
+Ability to select hostname in element picker when creating cosmetic filters
+Show unused hostname(s) between a hostname and its base domain

@@ -1,0 +1,25 @@
+resolve vue PropType 
+Release build crashes on iOS and Android. Fatal Exeption
+Default in Babel 8 to use @babel/plugin-transform-runtime
+@babel/preset-env and the term useBuiltIns
+'Symbol' is undefined in IE after using babel Core Latest Version 3 : For 7597 Need Solution
+Module not found: Error: Can't resolve '@babel/runtime/helpers/asyncToGenerator'
+Support for removing certain attribute from JSX Element using babel-plugin-transform-react-jsx
+Babel parser typescript should throw when accessors do not agree in visibility  
+[BUG/TypeScript] declare global conflict with block declaration
+Export all node flow types from @babel/types
+it shouldn't turn ** in to Math.pow for BigInt
+Add new option dts: boolean to babel-parser TypeScript plugin
+an async traversal visitor, which your current version of Babel does not support
+@babel/helper-module-transforms rewrites type annotations containing named imports incorrectly
+browserlist Firefox >= 52 adds regeneratorRuntime also if async is supported
+@babel/eslint-parser forces duplicating build dependencies across repos
+Support new TypeScript syntax - get/set in non-class scopes
+Do not hardcode <pkg>/jsx-runtime as entry point
+transforming "typeof" to "_typeof" causes an error in Javascript in many webpages
+@babel/traverse   Uncaught ReferenceError: process is not defined
+TypeError: Cannot read property 'range' of null
+Support Flow's indexed access type
+Function.prototype.apply was called on WeakMap.prototype.get, which is a string and not a function
+'undefined is not a function' with new JSX transform on development mode
+@babel/eslint-parser does not add keys to ObjectTypeProperty

@@ -1,0 +1,25 @@
+Avoid false positives like 'Critical dependency: the request of a dependency is an expression' for modules/files known to be safe
+MainFields shouldn't be used for resolution when resolving dependancies.
+5.25+, Webpack AMD bundle exports changed behavior when used with runtimeChunk
+Could we strongly type LoaderContext?
+Uncaught TypeError: __webpack_require__.n is not a function
+Persistent cache throws warning about build dependency resolution because it's missing a \u0000 char
+[Webpack 5]: cache leak with incremental compilation
+Webpack 5 app load time slowdown
+core plugin LimitChunkCountPlugin generates deprecation warning
+webpack's named exports not available with Node's ESM resolution
+Broken since v5.25.0
+webpack serve --profile does not respect logging: "verbose", causing profile results to be hidden
+NodeJS app with http-auth crashes after Webpack5
+[Webpack 5: ModuleFederationPlugin] Uncaught (in promise) TypeError: entry.get is not a function
+WorkerPlugin doesn't correctly handle new URL().toString()
+Improve Persistent Caching for multiple configurations
+Unused code is not removed from dynamic imports
+Const reassignment in production build
+Module Federation deps strictVersion mismatch source in error message
+ESM re-exports to umd
+Support named export in loader modules
+Problems that are affected by the import of the webpack version of open source users
+webpackPrefetch: true breaks library output
+Feature Request: Expose ModuleFederationPluginOptions in type definitions
+Update failed: ChunkLoadError: Loading hot update chunk failed.

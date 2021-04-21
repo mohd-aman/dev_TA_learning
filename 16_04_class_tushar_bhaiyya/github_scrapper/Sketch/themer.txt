@@ -1,0 +1,12 @@
+Hack for gray conversion should no longer be necessary
+ls support - dircolors paradox
+Support for Vivaldi
+Theme support for Notepad++
+side by side themeing
+Please add support for tilix
+Telegram (Desktop, Android, Telegram X Android) theme
+Guake Terminal
+Request: Textual Template
+From Sublime to Themer
+Brackets
+GTK3 theme?

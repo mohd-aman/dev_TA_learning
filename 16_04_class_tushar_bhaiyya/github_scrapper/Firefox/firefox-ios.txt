@@ -1,0 +1,25 @@
+FXIOS-1721 ⁃ Redm
+FXIOS-1719 ⁃ Follow Up #8322 - [XCUITests] Fix tests on iPad for the full test plan
+FXIOS-1716 ⁃ Add Sync Now button to new Sync Tab Tray
+FXIOS-1714 ⁃ [l10n tooling] Create script that will commit each locale as a separate commit
+FXIOS-1715 ⁃ Investigate missing strings in latest export
+FXIOS-1713 ⁃ Page fails to load fully
+FXIOS-1712 ⁃ Update Amazon search codes to be mobile specific
+FXIOS-1711 ⁃ Include eBay as a search option
+FXIOS-1709 ⁃ Authentication.testPromptPassCodeUponReentry - Smoketest
+FXIOS-1708 ⁃ Reader mode is failing time to time on the same page
+FXIOS-1707 ⁃ Turn off all Leanplum integrations on iOS by May 31,2021
+FXIOS-1705 ⁃ Land Remove Shortcut string
+FXIOS-1702 ⁃ Pull secrets out of info.plist
+FXIOS-1701 ⁃ 😎 1670127
+FXIOS-1700 ⁃ [XCUITests] Fix tests on iPad for the full test plan
+FXIOS-1699 ⁃ ActivityStream.testTopSitesOpenInNewPrivateTabDefaultTopSite - SmokeXCUITest
+FXIOS-1698 ⁃ Search with Firefox Does Not Work in a PDF Page
+FXIOS-1697 ⁃ Address bar flashes blank and white when scrolling
+FXIOS-1695 ⁃ Parameterize pocket name in legacy strings
+FXIOS-1694 ⁃ Implement Pocket SPOCs for experimentation in Nimbus
+FXIOS-1691 ⁃ Create Glean events for all product counters
+FXIOS-1690 ⁃ [Regression] Incorrect size for fav icon in Recently closed view
+FXIOS-1687 ⁃ [XCUITests] Add variables for each accessibility ID
+FXIOS-1686 ⁃ Integrate SKAdnetwork
+FXIOS-1685 ⁃ Trying to open a tab from private mode opens in attentive mode instead of the website

@@ -1,0 +1,25 @@
+Better Image API Parity with React Native
+Svg did not rendered as expected
+renderToJson broken in 3.2.5
+Support fixed position for prototypes
+Support textTransform capitalize enum
+Non-uniform border mask path overlaps borderRadius
+Render crashes Sketch with @skpm/builder  @0.7.0 - @0.7.5
+Symbol Master Layout options for resizing with overrides
+Proposal: making render() async
+LayerStyles / Appearance API
+Support for Linux
+Building 'symbols' example after changes fails when browsing Symbols page in Sketch
+[Feature-request] Add controls for 'manage overrides' in symbols
+Automate e2e tests for all examples
+Introduce Page.Container component
+Getting the existing symbols could be easier
+Investigate removing "special" meaning of symbols page
+Cleanup shared text style lookup
+Causes a continuous increase in memory usage
+⚛️💎🐜 Render Ant Design components to Sketch
+<Text> does not support numberOfLines or ellipsizeMode
+SVG height and width
+(docs) Add a "slowstart"
+React Created Artboard could not be retrieved by the mirror app.
+Extend profile-cards-primitives to run in react-native

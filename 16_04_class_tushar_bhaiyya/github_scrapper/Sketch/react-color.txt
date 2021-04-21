@@ -1,0 +1,25 @@
+Change checkboard default colors to full opacity
+Object doesn't support property or method 'contains' in ie11
+After clicking on input filed of sketch picker in reat color
+Adjust BlockPicker's Preview height
+How to choose black and white from Hue?
+BUG: SketchPicker Component in SSR project display warning props don't match
+Uncaught TypeError: Cannot read property 'isValidHex' of undefined
+getContainerRenderWindow in Saturation component inside iframe is causing a crash
+Uncaught TypeError: Cannot read property 'canvas' of undefined
+Bug: mouseup event doesn't always fire
+Changelog for 2.19.x?
+Bug: can't choose color from selector if my initial color #00000 or #ffffff
+Bug: A security error occurred and caused a crash when used in a different source iframe
+How to hide input field and '#' from TwitterPicker
+ Behavior beyond expectations  when the mouse moves out from below
+ChromePicker broken on 2.19.3 version in Internet Explorer 11
+ColorWrapped saturation block pointer jumps erratically in newer versions of React (16.3+)
+How to use by browser script tag ， not by npm？
+Color picker point sticks to bottom left and bottom right corners while mouse dragging at bottom line
+Range input in a scaled element
+Bug: Favicon is not appearing on Documentation Site.
+Color Picker bug
+eyedropper tool to pick colors from screen
+eyedropper tool
+Why can't I select colors on Windows?

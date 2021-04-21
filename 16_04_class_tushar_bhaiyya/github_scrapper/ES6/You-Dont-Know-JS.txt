@@ -1,0 +1,25 @@
+Chinese translation of 2nd edition book1
+Is this example in the book really a closure or just global scope reference?
+Ukrainian translation of YDKJS Yet 2nd Edition
+for types & grammar 2nd-edition: cover % operator nuances
+Chapter 2: Functions, Confusing Grammar
+Scopes & Closures Ch. 6 - Switch Statement Scoping
+types & grammar: research trig math
+sync & async: research event loop
+numbersCloseEnoughToEqual function is not valid for all numbers
+"types & grammar": no more "early ReferenceError"
+Proposal: add a paragraph about WebAssembly
+"abc".match( RegExp.prototype ) gives an error
+ch6: Benchmarking | Use console.time()
+this & Object Prototypes - Chapter 3: Symbol.iterator enumerablility
+Code example "isThisCool" in Ch3 "Types and Grammar", "Native Prototypes" throws error
+Calling template literals "interpolated string literals" is misleading
+Wrong reference
+ToPrimitive Abstract operation clarification
+Async & Performance Chapter 6 "Repetition" section
+Types & Grammar - Chapter 2 : TypeError while reversing a string.
+Include some coverage of common tag functions for tagged template literals
+this & Object Prototypes - Chapter 3 : 'in' operator 
+Async & Performance Chapter 3: Promises - ReferenceError instead of TypeError
+Async & Performance Chapter 4 for..of completion signal to iterator
+Async & Performance: optimize gen-runner in chapter 4

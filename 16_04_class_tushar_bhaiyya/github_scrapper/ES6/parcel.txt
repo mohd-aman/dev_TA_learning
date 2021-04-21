@@ -1,0 +1,25 @@
+alias not working for preact/compact
+Unexpected token error in @parcel/ts-utils
+JavaScript heap out of memory
+Cannot find module "@parcel/config-default"
+Worker bundle URL failing to get file:/// origin
+optimizer-terser: Unterminated string constant bug
+parcel build does not automatically exit
+Inheritance issue
+Broken build with posthtml
+Background image / no such file or directory,
+Pick up dev server PORT from env file
+Service Workers and React HMR do not work well together
+Elm + parcel serve unusable: File changes not detected after compilation error
+NODE_OPTIONS handling breaks with quoted arguments
+@parcel/transformer-typescript-tsc is slow because of tsconfig loading
+Uncaught TypeError: Object.defineProperty called on non-object, caused by tagged template literal in imported module
+Parcel 2 lets babel private class polyfill bloat everything so much that an unused class adds *400 BYTES* WITH A PURE COMMENT
+Parcel 2 somehow renames all private class properties to undefined when targeting newest chrome
+Random illegal instructions while building: Unreachable code
+Respect NODE_PATH environment variable
+Throw an error for "main": "something.html" in package.json
+serviceWorker.register(new URL(...)) generates failing code
+Upgrade to cssnano 5 in optimizer
+Parcel build fails on jsx syntax despite appropriate plugins presumably in place
+Use human-readable variable names instead of $a3b86e0361d88a0cf0c1608dc4320503$$interop$default

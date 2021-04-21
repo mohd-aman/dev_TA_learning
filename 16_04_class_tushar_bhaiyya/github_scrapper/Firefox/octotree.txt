@@ -1,0 +1,25 @@
+Unusably slow on large PRs
+Feature request: ignore whitespaces in pull requests
+Octotree did NOT violate the AGPL. Period.
+Feature request: toggle between "show changed files only" and "show all files" while reviewing PRs
+[FR] Ability to ignore comments by specific users
+[suggestion] Multi-language support is really in need
+Feature request: show summary of discussion
+Feature Request: Pin the sidebar in the active window only
+Does not display C++ file icon for .cc extension
+Getting "Forbidden" for some repos
+⚠️ READ THIS FIRST - Common Troubleshooting
+Bug on highlight line with multi-tab
+Octotree badge
+Feature Request - Remove overflow
+Reposition bookmark icon on conversations
+Feature request: Cache for particular repos
+[idea]: better sorting order
+Display files whose contents match search keyword
+Back button navigation breaks
+Disable animations when prefers-reduced-motion: reduce
+submodule link in GHE
+Feature idea: In PR review mode have a way to mark a file as reviewed
+Disable on github pages on enterprise
+Can add the Disable Browser Auto Translate property?
+Feature request: see changed classes/functions in pull requests
