@@ -50,27 +50,17 @@ Thank You`;
     await page.click('.search-global-typeahead__input.always-show-placeholder');
     await page.type('.search-global-typeahead__input.always-show-placeholder',companyName)
     await page.keyboard.press('Enter');
-    await page.waitForSelector('.entity-result__item');
-    let connectionLinks = await page.$$('.entity-result__item');
-    for(let i=0;i<connectionLinks.length;i++){
-        console.log(connectionLinks[i]);
+    await page.waitForSelector('.entity-result__title .app-aware-link');
+    let connections = await page.$$('.entity-result__title .app-aware-link');
+    let connectionLinks = [];
+    console.log(connections.length);
+    for(let i=0;i<connections.length;i++){
+        let link = await page.evaluate(function(elem){return elem.getAttribute("href");},connections[i]);
+        connectionLinks.push(link);
     }
-    //code for searching for company 
-    // for(let i=0;i<companyNames.length;i++){
-    //     await page.waitForSelector('.search-global-typeahead__input.always-show-placeholder');
-    //     if(i>0){
-    //         await page.focus('.search-global-typeahead__input.always-show-placeholder');
-    //         await page.keyboard.down('Control');
-    //         await page.keyboard.press('A');
-    //         await page.keyboard.up('Control');
-    //         await page.keyboard.press('Backspace');
-    //     }
-    //     await page.type('.search-global-typeahead__input.always-show-placeholder',companyNames[i]);
-    //     await page.keyboard.press('Enter');
-    //     await page.waitForTimeout(10000);
-    // }
-    let links = ['https://www.linkedin.com/in/shantanu-11/','https://www.linkedin.com/in/mohd-aman/'];
-    // await sendMessage(links,page);
+    console.log(connectionLinks);
+    
+    // await sendMessage(connectionlinks,page);
     // await browser.close();
 })();
 
