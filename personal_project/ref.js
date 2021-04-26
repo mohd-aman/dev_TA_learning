@@ -59,8 +59,7 @@ Thank You`;
         connectionLinks.push(link);
     }
     console.log(connectionLinks);
-    
-    // await sendMessage(connectionlinks,page);
+    await sendMessage(connectionLinks,page);
     // await browser.close();
 })();
 
