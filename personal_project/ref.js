@@ -7,13 +7,6 @@ const pass = "20110073355";
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
 let jobLink = process.argv.slice(2)[2];
-
-let msg = `Hey There ! I am Mohd Aman , a third year student pursuing B.tech from GGSIPU and Currenty looking for internship roles , My key skills are - Strong Problem Solving, C, C++, Java OOPs, DBMS.
-I have completed 730+ questions on leetcode.
-It will be great If you can refer me for this role 
-Job id - ${jobId}
-Link- ${jobLink}
-Thank You`;
 (async () => {
   const browser = await puppeteer.launch({
       headless:false,
@@ -58,8 +51,9 @@ Thank You`;
         let link = await page.evaluate(function(elem){return elem.getAttribute("href");},connections[i]);
         connectionLinks.push(link);
     }
+    let link = ['https://www.linkedin.com/in/shantanu-11/']
     console.log(connectionLinks);
-    await sendMessage(connectionLinks,page);
+    await sendMessage(link,page);
     // await browser.close();
 })();
 
@@ -70,6 +64,15 @@ async function sendMessage(links,page){
         await page.waitForSelector('.message-anywhere-button.pvs-profile-actions__action.artdeco-button');
         await page.click('.message-anywhere-button.pvs-profile-actions__action.artdeco-button');
         await page.waitForTimeout(3000);
+        let name = links[i].split('/')[4].split('-')[0];
+        let msg = `Hi ${name} ! 
+I am Mohd Aman , a third year student pursuing B.tech from GGSIPU and Currenty looking for internship roles , My key skills are - Strong Problem Solving, C, C++, Java OOPs, DBMS.
+I have completed 730+ questions on leetcode.
+It will be great If you can refer me for this role 
+Job id - ${jobId}
+Link- ${jobLink}
+Thank You`;
+        // console.log(msg);
         if(await page.$('.msg-s-message-list.full-width.scrollable')===null){
             await page.waitForSelector('.msg-form__contenteditable.t-14.t-black--light.t-normal.flex-grow-1.full-height.notranslate');
             await page.type('.msg-form__contenteditable.t-14.t-black--light.t-normal.flex-grow-1.full-height.notranslate',msg);
