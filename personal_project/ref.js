@@ -7,6 +7,7 @@ const pass = "20110073355";
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
 let jobLink = process.argv.slice(2)[2];
+let linkToResume = "https://drive.google.com/file/d/1BlNaU_eavSuNhzRci7Gl3ocCrWp994Tp/view";
 (async () => {
   const browser = await puppeteer.launch({
       headless:false,
@@ -46,14 +47,14 @@ let jobLink = process.argv.slice(2)[2];
     await page.waitForSelector('.entity-result__title .app-aware-link');
     let connections = await page.$$('.entity-result__title .app-aware-link');
     let connectionLinks = [];
-    console.log(connections.length);
+    // console.log(connections.length);
     for(let i=0;i<connections.length;i++){
         let link = await page.evaluate(function(elem){return elem.getAttribute("href");},connections[i]);
         connectionLinks.push(link);
     }
-    let link = ['https://www.linkedin.com/in/shantanu-11/']
+    // let link = ['https://www.linkedin.com/in/shantanu-11/']
     // console.log(connectionLinks);
-    await sendMessage(link,page);
+    await sendMessage(connectionLinks,page);
     // await browser.close();
 })();
 
@@ -72,7 +73,8 @@ I have completed 730+ questions on leetcode.
 It will be great If you can refer me for this role 
 Job id - ${jobId}
 Link- ${jobLink}
-Thank You`;
+Thank You
+Resume - ${linkToResume}`;
         // console.log(msg);
         if(await page.$('.msg-s-message-list.full-width.scrollable')===null){
             await page.waitForSelector('.msg-form__contenteditable.t-14.t-black--light.t-normal.flex-grow-1.full-height.notranslate');
@@ -80,6 +82,7 @@ Thank You`;
             await page.waitForSelector('.msg-form__send-button.artdeco-button.artdeco-button--1');
             await page.waitForTimeout(5000);
             await page.click('.msg-form__send-button.artdeco-button.artdeco-button--1');
+            await page.waitForSelector('[aria-label="Attach a file to your conversation with "]')
         }
     }
 }
