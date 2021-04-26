@@ -52,7 +52,7 @@ let jobLink = process.argv.slice(2)[2];
         connectionLinks.push(link);
     }
     let link = ['https://www.linkedin.com/in/shantanu-11/']
-    console.log(connectionLinks);
+    // console.log(connectionLinks);
     await sendMessage(link,page);
     // await browser.close();
 })();
@@ -65,6 +65,7 @@ async function sendMessage(links,page){
         await page.click('.message-anywhere-button.pvs-profile-actions__action.artdeco-button');
         await page.waitForTimeout(3000);
         let name = links[i].split('/')[4].split('-')[0];
+        name = name.charAt(0).toUpperCase()+name.slice(1);
         let msg = `Hi ${name} ! 
 I am Mohd Aman , a third year student pursuing B.tech from GGSIPU and Currenty looking for internship roles , My key skills are - Strong Problem Solving, C, C++, Java OOPs, DBMS.
 I have completed 730+ questions on leetcode.
