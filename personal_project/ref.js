@@ -2,7 +2,7 @@
 // let request = require('request');
 const puppeteer = require('puppeteer');
 const id = "jafov95470@hype68.com";
-const pass = "20110073355";
+const pass = "";
 
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
