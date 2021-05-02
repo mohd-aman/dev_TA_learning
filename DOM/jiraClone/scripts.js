@@ -59,13 +59,35 @@ function chooseModalFilter(e){
 function addTickets(e){
     if(e.key == 'Enter'){
         let modalText = e.target.textContent;
+        let ticketId = uid();
         let ticketDiv = document.createElement("div");
         ticketDiv.classList.add("ticket");
         ticketDiv.innerHTML = ` <div class="ticket-filter ${selectedFilter}"></div>
-        <div class="ticket-id">#exampleId</div>
+        <div class="ticket-id">#${ticketId}</div>
         <div class="ticket-content">${modalText}</div>`;
         ticketContainer.append(ticketDiv);
         e.target.parentNode.remove();
+
+        if(!localStorage.getItem('allTickets')){
+            let allTickets = [];
+            let ticketObject = {};
+            ticketObject.ticketId = ticketId;
+            ticketObject.ticketFilter = selectedFilter;
+            ticketObject.ticketContent = modalText;
+            allTickets.push(ticketObject);
+            localStorage.setItem("allTickets",JSON.stringify(allTickets));
+        }
+        else{
+            let allTickets = JSON.parse(localStorage.getItem("allTickets"));
+            let ticketObject = {};
+            ticketObject.ticketId = ticketId;
+            ticketObject.ticketFilter = selectedFilter;
+            ticketObject.ticketContent = modalText;
+            allTickets.push(ticketObject);
+      
+            localStorage.setItem("allTickets" , JSON.stringify(allTickets));
+        }
+
         selectedFilter = "black";
     }
 }
@@ -87,3 +109,20 @@ function chooseFilter(e){
     let filterCode = filterCodes[filter];
     ticketContainer.style.background = filterCode;
 }
+
+function loadTickets(){
+    if(localStorage.getItem("allTickets")){
+        let allTickets = JSON.parse(localStorage.getItem("allTickets"));
+        for(let i=0;i<allTickets.length;i++){
+            let {ticketId,ticketFilter,ticketContent} = allTickets[i];
+            let ticketDiv = document.createElement("div");
+            ticketDiv.classList.add("ticket");
+            ticketDiv.innerHTML = `<div class="ticket-filter ${ticketFilter}"></div>
+            <div class="ticket-id">#${ticketId}</div>
+            <div class="ticket-content">${ticketContent}</div>`;
+            ticketContainer.append(ticketDiv);
+        }
+    }
+}
+
+loadTickets();

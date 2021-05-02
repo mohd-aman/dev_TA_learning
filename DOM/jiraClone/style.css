@@ -89,9 +89,13 @@
 }
 
 .tickets-container {
-  height: 85vh;
+  min-height: 85vh;
   background: #bdc3c7;
   padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  grid-gap: 20px;
 }
 
 .open-modal:hover {
@@ -141,14 +145,14 @@
 }
 
 .ticket {
-    height: 30vh;
-    width: 25vw;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    background: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  height: 30vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .ticket div {
@@ -171,7 +175,7 @@
   align-self: center;
 }
 
-.active-filter{
+.active-filter {
   opacity: 1;
   border: 2px solid white;
 }
