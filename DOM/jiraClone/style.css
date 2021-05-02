@@ -78,7 +78,7 @@
   font-size: 1.5rem;
 }
 
-.close-ticket {
+.close-modal {
   /* height: 100%; */
   /* width: 50%; */
   height: 100%;
@@ -102,7 +102,7 @@
   background: #2c3e50 !important;
 }
 
-.close-ticket:hover {
+.close-modal:hover {
   background: #2c3e50 !important;
 }
 
@@ -178,4 +178,15 @@
 .active-filter {
   opacity: 1;
   border: 2px solid white;
+}
+
+.ticket-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-trash{
+  color:black;
+  margin: 5px;
+  cursor: pointer;
 }
