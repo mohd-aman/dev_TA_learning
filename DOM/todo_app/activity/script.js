@@ -23,6 +23,9 @@ function addTodo(){
         pTag.innerHTML = todo;
         
         let deleteButton = document.createElement("button");
+        deleteButton.addEventListener("click",function(e){
+            listItem.remove();
+        })
         deleteButton.classList.add("delete-task");
         deleteButton.innerHTML = "DELETE";
         listItem.append(pTag);

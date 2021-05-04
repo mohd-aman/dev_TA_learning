@@ -60,6 +60,7 @@ body{
 .todo{
     padding: auto;
     display: inline;
+    width: 80%;
     color: white;
     text-align: center;
     font-size: 1.5rem;
