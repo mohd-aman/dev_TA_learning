@@ -8,14 +8,43 @@ let selectedFilter = "black";
 let allFilters = document.querySelectorAll('.ticket-filter div')
 // console.log(allFilters);
 let ticketContainer = document.querySelector('.tickets-container');
-let openModalBtn = document.querySelector('.open-modal');
+let openModalBtn = document.querySelector(".open-modal");
+console.log(openModalBtn);
 let closeModalBtn = document.querySelector(".close-modal");
 
-openModalBtn.addEventListener("click",handleModalBtn);
+
+function loadTickets(){
+    if(localStorage.getItem("allTickets")){
+        ticketContainer.innerHTML = "";
+        let allTickets = JSON.parse(localStorage.getItem("allTickets"));
+        for(let i=0;i<allTickets.length;i++){
+            let {ticketId,ticketFilter,ticketContent} = allTickets[i];
+            let ticketDiv = document.createElement("div");
+            ticketDiv.classList.add("ticket");
+            ticketDiv.innerHTML = ` <div class="ticket-filter ${ticketFilter}"></div>
+            <div class="ticket-info">
+            <div class="ticket-id">#${ticketId}</div>
+            <div class="ticket-delete">
+            <i class="fas fa-trash" id=${ticketId}></i>
+            </div>
+            </div>
+            <div class="ticket-content">${ticketContent}</div>`;;
+            ticketDiv.querySelector(".ticket-filter").addEventListener("click" , toggleTicketFilter);
+            ticketDiv.querySelector(".ticket-delete i").addEventListener("click" , handleTicketDelete);
+            ticketContainer.append(ticketDiv);
+        }
+    }
+}
+
+loadTickets();
+
+openModalBtn.addEventListener("click",handleOpenModal);
 
 closeModalBtn.addEventListener("click",handleCloseModal);
 
-function handleModalBtn(e){
+
+
+function handleOpenModal(e){
     let modal = document.querySelector('.modal');
     if(modal){
         return;
@@ -132,26 +161,52 @@ function loadSelectedTickets(ticketFilter){
             let ticketDiv = document.createElement("div");
             ticketDiv.classList.add("ticket");
             ticketDiv.innerHTML = ` <div class="ticket-filter ${ticketFilter}"></div>
+            <div class="ticket-info">
             <div class="ticket-id">#${ticketId}</div>
-            <div class="ticket-content">${ticketContent}</div>`;
+            <div class="ticket-delete">
+            <i class="fas fa-trash" id=${ticketId}></i>
+            </div>
+            </div>
+            <div class="ticket-content">${ticketContent}</div>`;;
+            ticketDiv.querySelector(".ticket-filter").addEventListener("click" , toggleTicketFilter);
+            ticketDiv.querySelector(".ticket-delete i").addEventListener("click" , handleTicketDelete);
             ticketContainer.append(ticketDiv);
         }
     }
 }
 
-function loadTickets(){
-    if(localStorage.getItem("allTickets")){
-        let allTickets = JSON.parse(localStorage.getItem("allTickets"));
-        for(let i=0;i<allTickets.length;i++){
-            let {ticketId,ticketFilter,ticketContent} = allTickets[i];
-            let ticketDiv = document.createElement("div");
-            ticketDiv.classList.add("ticket");
-            ticketDiv.innerHTML = `<div class="ticket-filter ${ticketFilter}"></div>
-            <div class="ticket-id">#${ticketId}</div>
-            <div class="ticket-content">${ticketContent}</div>`;
-            ticketContainer.append(ticketDiv);
+function toggleTicketFilter(e){
+    let filters = ["red","blue","green","black"];
+    let currentFilter = e.target.classList[1];
+    let idx = filters.indexOf(currentFilter);
+    idx = (idx+1)%filters.length;
+    let currentTicket = e.target;
+    currentTicket.classList.remove(currentFilter);
+    currentTicket.classList.add(filters[idx]);
+    let allTickets = JSON.parse(localStorage.getItem("allTickets"));
+    let id  = currentTicket.nextElementSibling.children[0].textContent.split("#")[1];
+    console.log(id);
+    for(let i=0;i<allTickets.length;i++){
+        if(allTickets[i].ticketId == id){
+            allTickets[i].ticketFilter = filters[idx];
+            break;
         }
     }
+    localStorage.setItem("allTickets",JSON.stringify(allTickets));
 }
 
-loadTickets();
+function handleTicketDelete(e){
+    let ticketToBeDeleted = e.target.id;
+    let allTickets  = JSON.parse(localStorage.getItem("allTickets"));
+    let filteredTickets = allTickets.filter(function(ticketObject){
+        return ticketObject.ticketId != ticketToBeDeleted;
+    })
+    localStorage.setItem("allTickets",JSON.stringify(filteredTickets));
+    loadTickets();
+}
+
+function handleCloseModal(e){
+    if(document.querySelector(".modal")){
+        document.querySelector(".modal").remove();
+    }
+}
