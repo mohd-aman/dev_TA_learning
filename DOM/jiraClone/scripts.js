@@ -9,7 +9,7 @@ let allFilters = document.querySelectorAll('.ticket-filter div')
 // console.log(allFilters);
 let ticketContainer = document.querySelector('.tickets-container');
 let openModalBtn = document.querySelector(".open-modal");
-console.log(openModalBtn);
+// console.log(openModalBtn);
 let closeModalBtn = document.querySelector(".close-modal");
 
 
