@@ -5,7 +5,7 @@ let filterCodes = {
     "black":"#34495e"
 }
 let selectedFilter = "black";
-let allFilters = document.querySelectorAll('.ticket-filter div')
+let allFilters = document.querySelectorAll('.ticket-filters div')
 // console.log(allFilters);
 let ticketContainer = document.querySelector('.tickets-container');
 let openModalBtn = document.querySelector(".open-modal");
