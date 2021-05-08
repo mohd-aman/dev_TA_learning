@@ -94,7 +94,12 @@ function addTickets(e){
         let ticketDiv = document.createElement("div");
         ticketDiv.classList.add("ticket");
         ticketDiv.innerHTML = ` <div class="ticket-filter ${selectedFilter}"></div>
-        <div class="ticket-id">#${ticketId}</div>
+        <div class="ticket-info">
+            <div class="ticket-id">#${ticketId}</div>
+            <div class="ticket-delete">
+            <i class="fas fa-trash" id=${ticketId}></i>
+            </div>
+            </div>
         <div class="ticket-content">${modalText}</div>`;
         ticketContainer.append(ticketDiv);
         e.target.parentNode.remove();
