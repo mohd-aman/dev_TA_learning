@@ -1,8 +1,8 @@
 // let cheerio = require('cheerio');
 // let request = require('request');
 const puppeteer = require('puppeteer');
-const id = "jafov95470@hype68.com";
-const pass = "";
+const id = "saifiamaan445@gmail.com";
+const pass = "Saifiamaan445@";
 
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
@@ -43,8 +43,10 @@ let linkToResume = "https://drive.google.com/file/d/1BlNaU_eavSuNhzRci7Gl3ocCrWp
     await page.waitForSelector('.search-global-typeahead__input.always-show-placeholder');
     await page.click('.search-global-typeahead__input.always-show-placeholder');
     await page.type('.search-global-typeahead__input.always-show-placeholder',companyName)
+    await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
     await page.waitForSelector('.entity-result__title .app-aware-link');
+    await page.waitForTimeout(2000);
     let connections = await page.$$('.entity-result__title .app-aware-link');
     let connectionLinks = [];
     // console.log(connections.length);
@@ -65,8 +67,10 @@ async function sendMessage(links,page){
         await page.waitForSelector('.message-anywhere-button.pvs-profile-actions__action.artdeco-button');
         await page.click('.message-anywhere-button.pvs-profile-actions__action.artdeco-button');
         await page.waitForTimeout(3000);
-        let name = links[i].split('/')[4].split('-')[0];
-        name = name.charAt(0).toUpperCase()+name.slice(1);
+        let nameSelector = await page.$('.text-heading-xlarge.inline.t-24.v-align-middle.break-words');
+        let name = await nameSelector.evaluate(function(ele){
+            return ele.textContent;
+        })
         let msg = `Hi ${name} ! 
 I am Mohd Aman , a third year student pursuing B.tech from GGSIPU and Currenty looking for internship roles , My key skills are - Strong Problem Solving, C, C++, Java OOPs, DBMS.
 I have completed 730+ questions on leetcode.
