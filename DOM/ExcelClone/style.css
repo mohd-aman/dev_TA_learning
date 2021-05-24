@@ -40,7 +40,7 @@
 
 .cell {
     border-left: 0.1px solid;
-    border-bottom: 0.1px solid;
+    border-top: 0.1px solid;
     min-height: 30px;
     min-width: 70px;
 }
@@ -65,7 +65,6 @@
 
 .top-row-cell{
     border-left: 0.1px solid;
-    border-bottom: 0.1px solid;
     min-height: 30px;
     min-width: 70px;
     display: flex;
@@ -85,7 +84,7 @@
 .left-col-cell{
     height: 30px;
     width: 30px;
-    border-bottom: 0.1px solid;
+    border-top: 0.1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
