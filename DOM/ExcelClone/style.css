@@ -74,6 +74,7 @@
 .left-col{
     background: lightgrey;
     position: absolute;
+    width: 30px;
     left:0px;
     top: 30px;
     z-index: 2;
