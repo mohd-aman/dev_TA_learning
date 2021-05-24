@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    height: 30px;
+}
+
+.menu-options {
+    border: 0.50px solid;
+    height: 60px;
+}
+
+.address-content {
+    border: 0.5px solid;
+    height: 30px;
+}
+
+.cells-content {
+    height: calc( 100vh - 150px);
+    background: lightgrey;
+    overflow: auto;
+}
+
+.sheets {
+    border: 0.5px solid;
+    height: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    border: 0.5px solid;
+    min-height: 30px;
+    min-width: 70px;
+}
