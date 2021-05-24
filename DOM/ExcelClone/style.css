@@ -5,28 +5,33 @@
 }
 
 .menu {
+    border-bottom: 0.1px solid;
     height: 30px;
+    background: whitesmoke;
 }
 
 .menu-options {
-    border: 0.50px solid;
+    border-bottom: 0.1px solid;
     height: 60px;
+    background: whitesmoke;
 }
 
-.address-content {
-    border: 0.5px solid;
+.addres-content {
+    border-bottom: 0.1px solid;
     height: 30px;
+    background: whitesmoke;
 }
 
 .cells-content {
     height: calc( 100vh - 150px);
-    background: lightgrey;
+    background: white;
     overflow: auto;
 }
 
 .sheets {
-    border: 0.5px solid;
+    border-top: 0.1px solid;
     height: 30px;
+    background:whitesmoke;
 }
 
 .row {
@@ -34,7 +39,8 @@
 }
 
 .cell {
-    border: 0.5px solid;
+    border-left: 0.1px solid;
+    border-bottom: 0.1px solid;
     min-height: 30px;
     min-width: 70px;
 }
