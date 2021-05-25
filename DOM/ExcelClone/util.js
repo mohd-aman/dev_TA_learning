@@ -1,4 +1,4 @@
-function solveFormula(formula){
+function solveFormula(formula,selfCellObject){
     let formulaComps = formula.split(" ");
     for(let i=0;i<formulaComps.length;i++){
         let formulaComp = formulaComps[i];
@@ -9,12 +9,27 @@ function solveFormula(formula){
             console.log(colId);
             let cellObject  = db[rowId][colId];
             let value = cellObject.value;
+            if(selfCellObject){
+                cellObject.childrens.push(selfCellObject.name);
+            }
             formula = formula.replace(formulaComp,value);
         }
     }
     //Stack infix evaluation 
     let computedValue = eval(formula);
     return computedValue;
+}
+
+function updateChildrens(cellObject){
+    for(let i=0;i<cellObject.childrens.length;i++){
+        let childName = cellObject.childrens[i];
+        let {rowId,colId} = getRowIdColIdFromAddress(childName);
+        let childCellObject = db[rowId][colId];
+        let newValue = solveFormula(childCellObject.formula);
+        document.querySelector(`div[rowid='${rowId}'][colid='${colId}`).textContent = newValue;
+        childCellObject.value = newValue;
+        updateChildrens(childCellObject); 
+    }
 }
 
 function getRowIdColIdFromElement(element){

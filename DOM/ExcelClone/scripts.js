@@ -37,6 +37,8 @@ for(let i=0;i<allCells.length;i++){
         }
         cellObject.value = cellValue;
         // console.log("After update",cellObject)
+
+        updateChildrens(cellObject);
     })
 }
 
@@ -47,7 +49,7 @@ formulaInput.addEventListener("blur",function(e){
     if(formula){
         let {rowId,colId} = getRowIdColIdFromElement(lastSelectedCell);
         let cellObject = db[rowId][colId];
-        let computedValue = solveFormula(formula);
+        let computedValue = solveFormula(formula,cellObject);
         cellObject.formula = formula;
         //cellObject update
         cellObject.value = computedValue;
