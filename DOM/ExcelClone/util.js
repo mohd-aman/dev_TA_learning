@@ -32,6 +32,20 @@ function updateChildrens(cellObject){
     }
 }
 
+function removeFormula(cellObject){
+    cellObject.formula="";
+    for(let i=0;i<cellObject.parents.length;i++){
+        let parentName = cellObject.parents[i];
+        let {rowId,colId} = getRowIdColIdFromAddress(parentName);
+        let parentCellObject = db[rowId][colId];
+        let updatedChildrens = parentCellObject.childrens.filter(function(children){
+            return children!=cellObject.name;
+        })
+        parentCellObject.childrens = updatedChildrens;
+    }
+    cellObject.parents = [];
+}
+
 function getRowIdColIdFromElement(element){
     let rowId = element.getAttribute("rowid");
     let colId = element.getAttribute("colid");
