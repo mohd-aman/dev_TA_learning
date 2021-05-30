@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu {
@@ -29,6 +30,7 @@
 }
 
 .sheets {
+    display: flex;
     border-top: 0.1px solid;
     height: 30px;
     background:whitesmoke;
@@ -95,4 +97,39 @@
     position: absolute;
     top: 30px;
     left: 30px;
+}
+
+.add-sheet{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: .5px solid black;
+}
+
+.add-sheet .fas{
+    color:darkgrey;
+}
+
+.sheets-list{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.sheet{
+    border-right: .5px solid black;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    cursor:pointer;
+}
+
+.active-sheet{
+    background-color: white;
+    font-weight:bold;
 }
