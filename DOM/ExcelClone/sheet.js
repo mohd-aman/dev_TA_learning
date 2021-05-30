@@ -11,6 +11,8 @@ addSheetBtn.addEventListener("click",function(e){
     sheetDiv.setAttribute("sheetid",sheetId);
     sheetDiv.innerHTML = `Sheet ${sheetId+1}`;
     sheetList.append(sheetDiv);
+    initUi();
+    initDB();
 });
 
 sheetList.addEventListener("click",function(e){
@@ -20,4 +22,25 @@ sheetList.addEventListener("click",function(e){
     }
     document.querySelector(".active-sheet").classList.remove("active-sheet");
     selectedSheet.classList.add("active-sheet");
+    initUi();
+    let sheetId = selectedSheet.getAttribute("sheetid");
+    db = sheetsDB[sheetId].db;
+    visitedCells = sheetsDB[sheetId].visitedCells;
+    setUI();
 })
+
+function setUI(){
+    for(let i=0;i<visitedCells.length;i++){
+        let {rowId,colId} = visitedCells[i];
+        let cellObject = db[rowId][colId];
+        document.querySelector(`div[rowid="${rowId}"][colId="${colId}"]`).innerHTML = cellObject.value;
+    }
+}
+
+function initUi(){
+    for(let i=0;i<100;i++){
+        for(let j=0;j<25;j++){
+            document.querySelector(`div[rowid = "${i}"][colid="${j}"]`).innerHTML = "";
+        }
+    }
+}
