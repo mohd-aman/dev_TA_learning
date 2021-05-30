@@ -13,8 +13,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="menu">Menu</div>
-    <div class="menu-options">Menu Options</div>
+    <div class="menu">
+        <div class="fil">File</div>
+        <div class="home active-menu">Home</div>
+    </div>
+    <div class="menu-options">
+        <div class="file-menu-options hide">File Menu Options</div>
+        <div class="home-menu-options">
+            <div class="font-style">
+                <div class="bold"><i class="fas fa-bold"></i></div>
+                <div class="italic"><i class="fas fa-italic"></i></div>
+                <div class="underline"><i class="fas fa-underline"></i></div>
+            </div>
+        </div>
+    </div>
     <div class="addres-content">
         <input type="text" id="address" disabled>
         <input type="text" id="formula">
@@ -33,5 +45,6 @@
     <script src="./scripts.js"></script>
     <script src="./util.js"></script>
     <script src="./sheet.js"></script>
+    <script src="./menu.js"></script>
 </body>
 </html>

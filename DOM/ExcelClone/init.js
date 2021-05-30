@@ -43,7 +43,9 @@ function initDB(){
                 value:"",
                 formula:"",
                 childrens:[],
-                parents:[]
+                parents:[],
+                visited:false,
+                fontStyle : {bold:false , italic:false , underline:false}
             }
             row.push(cellObject);
         }
