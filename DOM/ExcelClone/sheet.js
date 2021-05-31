@@ -38,9 +38,10 @@ function setUI(){
 }
 
 function initUi(){
-    for(let i=0;i<100;i++){
-        for(let j=0;j<25;j++){
-            document.querySelector(`div[rowid = "${i}"][colid="${j}"]`).innerHTML = "";
-        }
+    for(let i=0;i<visitedCells.length;i++){
+        let {rowId,colId} = visitedCells[i];
+        let cell = document.querySelector(`div[rowid="${rowId}"][colid="${colId}"]`);
+        cell.innerHTML = "";
+        cell.style = "";
     }
 }

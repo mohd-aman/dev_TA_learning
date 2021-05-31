@@ -51,7 +51,12 @@ for(let i=0;i<allCells.length;i++){
       ? document.querySelector(".underline").classList.add("active-font-style")
       : document.querySelector(".underline").classList.remove("active-font-style");
 
-
+      if(lastSelectedCell){
+        document.querySelector(".font-alignments .active-font-style").classList.remove("active-font-style");
+      }
+      // 2. set active text align for the selected cell
+     let textAlignment = cellObject.textAlign;
+     document.querySelector(`.${textAlignment}`).classList.add("active-font-style");
     })
     
     allCells[i].addEventListener("blur",function(e){

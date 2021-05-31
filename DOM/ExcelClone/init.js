@@ -45,7 +45,8 @@ function initDB(){
                 childrens:[],
                 parents:[],
                 visited:false,
-                fontStyle : {bold:false , italic:false , underline:false}
+                fontStyle : {bold:false , italic:false , underline:false},
+                textAlign:"left"
             }
             row.push(cellObject);
         }
