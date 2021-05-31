@@ -111,5 +111,11 @@ formulaInput.addEventListener("blur",function(e){
         //ui update
         lastSelectedCell.textContent = computedValue;
         updateChildrens(cellObject);
+
+        if(cellObject.visited){
+            return;
+        }
+        cellObject.visited = true;
+        visitedCells.push({rowId:rowId,colId:colId});
     }
 })
