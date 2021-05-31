@@ -21,12 +21,23 @@ let colId;
 
 for(let i=0;i<allCells.length;i++){
     allCells[i].addEventListener("click",function(e){
+        
+        if(lastSelectedCell){
+            lastSelectedCell.classList.remove("active-cell");
+            document.querySelector(`div[trid="${colId}"]`).classList.remove("cell-selected");
+            document.querySelector(`div[lcid="${rowId}"]`).classList.remove("cell-selected");
+        }
         rowId = Number(e.target.getAttribute("rowid"));
         colId = Number(e.target.getAttribute("colid"));
+        e.target.classList.add("active-cell");
+        document.querySelector(`div[trid="${colId}"]`).classList.add("cell-selected");
+        document.querySelector(`div[lcid="${rowId}"]`).classList.add("cell-selected");
+        
         let cellObject = db[rowId][colId];
         let address = String.fromCharCode(65+colId)+(rowId+1)+"";
         addressInput.value = address;
         formulaInput.value = cellObject.formula;
+
 
         cellObject.fontStyle.bold
         ?document.querySelector(".bold").classList.add("avtive-font-style"):
