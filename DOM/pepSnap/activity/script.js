@@ -22,8 +22,9 @@ try{
     mediaRecorder.ondataavailable = function(e){
         console.log("Inside on data availble");
         recordedData = e.data;
+        saveVideoToFs();
     }
-    console.log(mediaRecorder);
+    // console.log(mediaRecorder);
 
     recordButton.addEventListener("click",function(){
         if(recordingState){
@@ -41,3 +42,14 @@ try{
         console.log(error);
     }
 })();
+
+function saveVideoToFs(){
+    console.log("Saving Video");
+    let videoUrl = URL.createObjectURL(recordedData);
+    console.log(videoUrl);
+    let aTag = document.createElement("a");
+    aTag.download = "video.mp4";
+    aTag.href = videoUrl;
+    aTag.click();
+    aTag.remove();
+}
