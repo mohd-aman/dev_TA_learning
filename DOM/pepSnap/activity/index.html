@@ -9,13 +9,17 @@
 </head>
 <body>
     <div class="video-container">
-        <video autoplay></video>
+        <video autoplay style="transform: scale(1);"></video>
     </div>
     <div class="media-controls">
-        <div class="record-video">
+        <div class="zoomInOut">
+            <div id="in">+</div>
+            <div id="out">-</div>
+        </div>
+        <div id="record-video">
             <div class="record-video-animate"></div>
         </div>
-        <div class="capture-photo">
+        <div id="capture-photo">
             <div class="capture-photo-animate"></div>
         </div>
     </div>

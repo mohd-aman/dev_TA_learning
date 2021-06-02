@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            margin:50px;
+        }
+        .red{
+            background: red;
+            animation:blip 1s infinite;
+        }
+
+        .yellow{
+            background: yellowgreen;
+            animation-name:scaleUp;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+            animation-fill-mode: backwards;
+        }
+
+        .blue{
+            background: blue;
+            animation:move 1s infinite
+        }
+
+        @keyframes scaleUp{
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(1.5);
+            }
+            100%{
+                transform: scale(3);
+            }
+        }
+
+        @keyframes move{
+            0%{
+                transform:translateX(0px);
+            }
+            50%{
+                transform:translateX(500px);
+            }
+            100%{
+                transform:translateX(0px);
+            }
+        }
+
+        @keyframes blip{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.1;
+            }
+        }
+    </style>
+    <body>
+        <div class="yellow box"></div>
+        <div class="red box"></div>
+        <div class="blue box"></div>
+    </body>
+</html>

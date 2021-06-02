@@ -8,6 +8,7 @@
     background: black;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 video{
@@ -37,6 +38,25 @@ video{
     align-items: center;
 }
 
+.zoomInOut{
+    flex-direction: column;
+    height: 60px !important;
+    border-radius:0 !important;
+    border:none !important;
+    justify-content: space-between !important;
+}
+
+.zoomInOut div{
+    background: white;
+    height: 35%;
+    width: 40%;
+    border-radius: 2px;
+    text-align: center;
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .record-video-animate{
     background: red;
     height: 70%;
@@ -44,7 +64,7 @@ video{
     border: 50%;
 }
 
-.capure-photo-animate{
+.capture-photo-animate{
     background:white;
     height: 70%;
     width: 70%;
@@ -52,7 +72,25 @@ video{
 }
 
 
+.record-animate{
+    animation: scaleUpDown 1s infinite;
+}
 
+.capture-animate{
+    animation:scaleUpDown 1s 1;
+}
+
+@keyframes scaleUpDown{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(0.9);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
 
 
 
