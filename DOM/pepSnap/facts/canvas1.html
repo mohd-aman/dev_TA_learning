@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      canvas {
+        background: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let canvas = document.querySelector("canvas");
+
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+
+      window.addEventListener("resize", function () {
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+      });
+
+      let ctx = canvas.getContext("2d");
+        // ctx.fillStyle = "yellow";
+        // console.log(ctx);
+
+        // ctx.fillRect(20, 20, 100, 200);
+        // ctx.fillRect(200, 20, 100, 200);
+        // ctx.fillStyle = "red";
+        // ctx.fillRect(200, 300, 100, 200);;
+        // console.log(canvas);
+
+      let isMouseDown = false;
+      ctx.lineWidth = 5;
+
+      canvas.addEventListener("mousedown", function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        isMouseDown = true;
+      });
+
+      canvas.addEventListener("mousemove", function (e) {
+        if (isMouseDown) {
+          let x = e.clientX;
+          let y = e.clientY;
+          ctx.lineTo(x, y);
+          ctx.stroke();
+        }
+      });
+
+      canvas.addEventListener("mouseup", function (e) {
+        isMouseDown = false;
+      });
+
+      
+    </script>
+  </body>
+</html>

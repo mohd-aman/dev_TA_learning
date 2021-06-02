@@ -13,17 +13,22 @@ try{
     videoPlayer.srcObject = mediaStream;
     mediaRecorder = new MediaRecorder(mediaStream);
 
-    mediaRecorder.onstop = function(e){
-        console.log("Inside on stop");
-    }
     mediaRecorder.onstart = function(e){
         console.log("Inside on start");
+        console.log(e);
     }
     mediaRecorder.ondataavailable = function(e){
         console.log("Inside on data availble");
+        console.log(e);
         recordedData = e.data;
         saveVideoToFs();
     }
+
+    mediaRecorder.onstop = function(e){
+        console.log("Inside on stop");
+        console.log(e);
+    }
+
     // console.log(mediaRecorder);
 
     recordButton.addEventListener("click",function(){
