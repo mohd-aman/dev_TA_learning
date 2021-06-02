@@ -42,6 +42,8 @@ try{
         }
         recordingState = !recordingState;
     })
+
+    photoButton.addEventListener("click",capturePhotos);
 }
     catch(error){
         console.log(error);
@@ -57,4 +59,17 @@ function saveVideoToFs(){
     aTag.href = videoUrl;
     aTag.click();
     aTag.remove();
+}
+
+function capturePhotos(){
+    let canvas = document.createElement("canvas");
+    canvas.height = videoPlayer.videoHeight;
+    canvas.width = videoPlayer.videoWidth;
+    let ctx = canvas.getContext("2d");
+    ctx.drawImage(videoPlayer,0,0);
+    let imageUrl = canvas.toDataURL("image/url");
+    let aTag = document.createElement("a");
+    aTag.download = "photo.jpg";
+    aTag.href = imageUrl;
+    aTag.click();
 }

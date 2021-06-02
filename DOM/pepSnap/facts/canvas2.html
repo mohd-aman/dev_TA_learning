@@ -24,7 +24,17 @@
             canvas.width = window.innerWidth;
         });
         let ctx = canvas.getContext("2d");
-        
+        let img = document.createElement("img");
+        img.src = "./1.jpg";
+        img.addEventListener("load",function(){
+            ctx.drawImage(img,0,0,1280,720);
+            
+            let imageUrl = canvas.toDataURL("image/jpg");
+            let aTag = document.createElement("a");
+            aTag.download = "Photo.jpg";
+            aTag.href = imageUrl;
+            aTag.click();
+        })
     </script>
 </body>
 </html>
