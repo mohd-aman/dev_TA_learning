@@ -73,14 +73,22 @@ try{
 })();
 
 function saveVideoToFs(){
-    console.log("Saving Video");
+    // console.log("Saving Video");
     let videoUrl = URL.createObjectURL(recordedData);
-    console.log(videoUrl);
-    let aTag = document.createElement("a");
-    aTag.download = "video.mp4";
-    aTag.href = videoUrl;
-    aTag.click();
-    aTag.remove();
+    // console.log(videoUrl);
+
+    let iv = setInterval(function(){
+        if(db){
+            saveMedia("Video",videoUrl);
+            clearInterval(iv);
+        }
+    },100);
+
+    // let aTag = document.createElement("a");
+    // aTag.download = "video.mp4";
+    // aTag.href = videoUrl;
+    // aTag.click();
+    // aTag.remove();
 }
 
 function capturePhotos(){
@@ -100,8 +108,15 @@ function capturePhotos(){
     }
     ctx.drawImage(videoPlayer,0,0);
     let imageUrl = canvas.toDataURL("image/url");
-    let aTag = document.createElement("a");
-    aTag.download = "photo.jpg";
-    aTag.href = imageUrl;
-    aTag.click();
+    // let aTag = document.createElement("a");
+    // aTag.download = "photo.jpg";
+    // aTag.href = imageUrl;
+    // aTag.click();
+
+    let iv = setInterval(function(){
+        if(db){
+            saveMedia("image",imageUrl);
+            clearInterval(iv);
+        }
+    },100);
 }
