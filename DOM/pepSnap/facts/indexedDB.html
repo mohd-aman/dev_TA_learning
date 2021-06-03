@@ -14,8 +14,9 @@
         <div>
             mid <input id="media-id" type="text">
             type <input id="media-type" type="text">
-            <button id="addMeida">Add Media</button>
+            <button id="addMedia">Add Media</button>
         </div>
+        <button id="showMedia">Show Media</button>
         <script>
             let db;
             let dbName = document.querySelector("#database-name");
@@ -26,8 +27,11 @@
             let mediaType = document.querySelector("#media-type");
             let addMediaBtn = document.querySelector("#addMedia");
 
+            let showMediaBtn = document.querySelector("#showMedia");
+
             openDBBtn.addEventListener("click",openDB);
             addMediaBtn.addEventListener("click",addMedia);
+            showMediaBtn.addEventListener("click",showMedia);
 
             function addMedia(){
                 let txn = db.transaction("Media","readwrite");
@@ -36,6 +40,19 @@
                 txn.onerror = function(e){
                     console.log("txn failed");
                     console.log(e);
+                }
+            }
+
+            function showMedia(){
+                let txn = db.transaction("Media","readonly");
+                let mediaStore = txn.objectStore("Media");
+                let cursorObject = mediaStore.openCursor();
+                cursorObject.onsuccess = function(e){
+                    let cursor = cursorObject.result;
+                    if(cursor){
+                        console.log(cursor.value);
+                        cursor.continue();
+                    }
                 }
             }
 
