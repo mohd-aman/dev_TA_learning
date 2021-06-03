@@ -29,6 +29,16 @@
             openDBBtn.addEventListener("click",openDB);
             addMediaBtn.addEventListener("click",addMedia);
 
+            function addMedia(){
+                let txn = db.transaction("Media","readwrite");
+                let mediaStore = txn.objectStore("Media");
+                mediaStore.add({mid:mid.value,type:mediaType.value});
+                txn.onerror = function(e){
+                    console.log("txn failed");
+                    console.log(e);
+                }
+            }
+
             function openDB(){
                 let dbRequest = indexedDB.open(dbName.value,dbVersion.value);
                 dbRequest.onupgradeneeded = function(e){
