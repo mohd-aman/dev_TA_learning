@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.gallery {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    height: 100vh;
+    grid-gap: 1px;
+    padding: 30px;
+}
+
+.gallery-item{
+    height: 25%;
+    width: 25%;
+    border: 1px solid lightgrey;
+}
+
+.media{
+    height: 80%;
+}
+
+video{
+
+}
+img{
+
+}
+
+.media-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.media-buttons div {
+}
+
+.fas {
+    font-size: 25px;
+}
