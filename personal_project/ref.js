@@ -1,13 +1,13 @@
 // let cheerio = require('cheerio');
 // let request = require('request');
 const puppeteer = require('puppeteer');
-const id = "saifiamaan445@gmail.com";
-const pass = "Saifiamaan445@";
+const id = "";
+const pass = "";
 
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
 let jobLink = process.argv.slice(2)[2];
-let linkToResume = "https://drive.google.com/file/d/1BlNaU_eavSuNhzRci7Gl3ocCrWp994Tp/view";
+let linkToResume = "https://drive.google.com/file/d/1rMbQmUKGoJ-wPNdCPdKlwclEvj_UrkBF/view";
 (async () => {
   const browser = await puppeteer.launch({
       headless:false,
@@ -37,25 +37,27 @@ let linkToResume = "https://drive.google.com/file/d/1BlNaU_eavSuNhzRci7Gl3ocCrWp
     await page.waitForSelector('.ember-view.mn-community-summary__link.link-without-hover-state');
     let connectionButton = await page.$('.ember-view.mn-community-summary__link.link-without-hover-state');
     await connectionButton.click();
-    await page.waitForSelector('[data-control-name="search_with_filters"]');
-    await page.click('[data-control-name="search_with_filters"]');
+    await page.waitForSelector('.ember-view.mn-connections__search-with-filters.link-without-visited-state');
+    await page.click('.ember-view.mn-connections__search-with-filters.link-without-visited-state');
     await page.waitForTimeout(3000);
     await page.waitForSelector('.search-global-typeahead__input.always-show-placeholder');
     await page.click('.search-global-typeahead__input.always-show-placeholder');
     await page.type('.search-global-typeahead__input.always-show-placeholder',companyName)
     await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
-    await page.waitForSelector('.entity-result__title .app-aware-link');
+    await page.waitForSelector('.mb1 .app-aware-link');
     await page.waitForTimeout(2000);
-    let connections = await page.$$('.entity-result__title .app-aware-link');
+    let connections = await page.$$('.mb1 .app-aware-link');
     let connectionLinks = [];
     // console.log(connections.length);
+    
     for(let i=0;i<connections.length;i++){
         let link = await page.evaluate(function(elem){return elem.getAttribute("href");},connections[i]);
         connectionLinks.push(link);
     }
     // let link = ['https://www.linkedin.com/in/shantanu-11/']
     // console.log(connectionLinks);
+    await page.waitForTimeout(3000);
     await sendMessage(connectionLinks,page);
     // await browser.close();
 })();
