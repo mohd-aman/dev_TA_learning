@@ -1,8 +1,8 @@
 // let cheerio = require('cheerio');
 // let request = require('request');
 const puppeteer = require('puppeteer');
-const id = "saifiamaan445@gmail.com";
-const pass = "Saifiamaan445@";
+const id = "";
+const pass = "";
 
 let companyName = process.argv.slice(2)[0];
 let jobId = process.argv.slice(2)[1];
