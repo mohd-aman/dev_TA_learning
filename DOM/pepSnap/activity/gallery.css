@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto',sans-serif;
 }
 
 .gallery {
@@ -55,4 +56,20 @@ img {
 .fa-trash {
     font-size: 25px;
     color:#e74c3c
+}
+
+.back-btn{
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    background:black;
+    color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:20px;
+    cursor: pointer;
 }

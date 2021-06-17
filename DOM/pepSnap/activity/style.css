@@ -80,6 +80,25 @@ video{
     animation:scaleUpDown 1s 1;
 }
 
+#gallery-btn{
+    position: absolute;
+    top:85%;
+    left: 90%;
+    background: black;
+    color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    border: 5px solid;
+
+}
+
 @keyframes scaleUpDown{
     0%{
         transform:scale(1);

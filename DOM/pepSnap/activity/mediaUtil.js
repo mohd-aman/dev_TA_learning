@@ -1,4 +1,4 @@
-let showMediaBtn = document.querySelector("#show-media");
+let showMediaBtn = document.querySelector("#gallery-btn");
 
 showMediaBtn.addEventListener("click",function(){
     window.location.assign("gallery.html");

@@ -27,6 +27,11 @@ let iv = setInterval(function(){
 },100);
 
 let gallery = document.querySelector(".gallery");
+let backBtn = document.querySelector(".back-btn");
+
+backBtn.addEventListener("click",function(){
+    window.location.assign("index.html");
+})
 
 function createMediaDiv(){
     let mediaDiv = document.createElement("div");
