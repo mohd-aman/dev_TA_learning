@@ -112,7 +112,28 @@ video{
 }
 
 
+@media (max-width:600px){
+    .media-controls {
+        height: 240px;
+        width: 280px;
+        position: absolute;
+        top: 74%;
+        left: 22%;
+        flex-direction: row;
+    }
+    #gallery-btn{
+        top: 90%;
+        left: 80%;
+        height: 45px;
+        width: 45px;
+        border: 2px solid;
+    }
+}
 
+
+@media (max-width:900px){
+    
+}
 
 
 
