@@ -10,7 +10,7 @@ function undoLine(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
-    redrawLIne();
+    redrawLine();
 }
 
 function redrawLine(){

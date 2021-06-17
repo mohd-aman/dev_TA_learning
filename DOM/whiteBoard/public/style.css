@@ -66,9 +66,11 @@
 .pencil-size {
     text-align: center;
 }
-.eraser-size{
+
+.eraser-size {
     text-align: center;
 }
+
 .eraser-size input {
     width: 90%;
 }
@@ -82,7 +84,7 @@
     justify-content: space-evenly;
 }
 
-.pencil-colors div{
+.pencil-colors div {
     height: 20px;
     width: 20px;
     border-radius: 50px;
@@ -104,6 +106,52 @@
     background: black;
 }
 
-.hide{
+.hide {
     display: none;
+}
+
+.sticky {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 190px;
+    /* background: lightgreen; */
+    /* border: 1px solid lightgray; */
+}
+
+.sticky-header {
+    height: 15%;
+    background: lightblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sticky-header div {
+    height: 70%;
+    width: 8%;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.minimize {
+    background: blue;
+}
+
+.close {
+    background: red;
+}
+
+.sticky-content {
+    height: 85%;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border: 1px solid lightgray;
 }
