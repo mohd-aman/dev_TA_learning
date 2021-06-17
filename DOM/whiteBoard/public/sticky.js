@@ -2,8 +2,18 @@ let stickyDiv = document.querySelector("#sticky");
 
 stickyDiv.addEventListener("click",appendSticky);
 
-function appendSticky(){
+function appendSticky(elem){
     let sticky = document.createElement("div");
+    if(elem){
+        sticky.innerHTML = `<div class="sticky-header">
+    <div class="minimize"></div>
+    <div class="close"></div>
+    </div>
+    <div class="sticky-content">
+    </div>`;
+    sticky.querySelector(".sticky-content").append(elem);
+    }
+    else{
     sticky.classList.add("sticky");
     sticky.innerHTML = `<div class="sticky-header">
                         <div class="minimize"></div>
@@ -12,6 +22,7 @@ function appendSticky(){
                         <div class="sticky-content">
                         <textarea cols="30" rows="10"></textarea>
                         </div>`;
+                    }
     let stickyHeader = sticky.querySelector(".sticky-header");
     let isStickyHold = false;
     let initialX;

@@ -155,3 +155,7 @@ textarea {
     padding: 10px;
     border: 1px solid lightgray;
 }
+.image-upload{
+    height: 100%;
+    width: 100%;
+}
