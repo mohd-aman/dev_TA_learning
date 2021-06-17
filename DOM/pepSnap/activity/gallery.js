@@ -38,7 +38,6 @@ function createMediaDiv(){
     mediaDiv.classList.add("gallery-item");
     mediaDiv.innerHTML=`
             <div class="media">
-                <img src="" alt="">
             </div>
             <div class="media-button">
                 <div class="download"> <i class="fas fa-download"></i> </div>
@@ -55,6 +54,10 @@ function appendImage(media){
     mediaDiv.querySelector(".media").append(image);
     gallery.append(mediaDiv);
 
+    mediaDiv.querySelector(".download").addEventListener("click",function(){
+        downloadMedia(media);
+    });
+    
     mediaDiv.querySelector(".delete").addEventListener("click",function(){
         deleteMedia(media);
     });

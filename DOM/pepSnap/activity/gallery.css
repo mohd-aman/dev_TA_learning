@@ -37,7 +37,7 @@ img {
     width: 100%;
 }
 
-.media-buttons {
+.media-button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
