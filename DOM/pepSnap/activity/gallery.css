@@ -62,7 +62,7 @@ img {
     position: absolute;
     top: 85%;
     left: 90%;
-    background:black;
+    background: black;
     color: white;
     height: 70px;
     width: 70px;
@@ -70,6 +70,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight:20px;
+    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
 }
