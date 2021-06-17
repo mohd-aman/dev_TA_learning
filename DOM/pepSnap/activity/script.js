@@ -73,13 +73,14 @@ try{
 })();
 
 function saveVideoToFs(){
-    // console.log("Saving Video");
-    let videoUrl = URL.createObjectURL(recordedData);
+    console.log("Saving Video");
+    // let videoUrl = URL.createObjectURL(recordedData);
     // console.log(videoUrl);
-
+    let blob = new Blob([recordedData],{type:"video/mp4"});
+    
     let iv = setInterval(function(){
         if(db){
-            saveMedia("Video",videoUrl);
+            saveMedia("Video",blob);
             clearInterval(iv);
         }
     },100);
