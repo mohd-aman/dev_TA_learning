@@ -1,11 +1,12 @@
 let stickyDiv = document.querySelector("#sticky");
 
-stickyDiv.addEventListener("click",appendSticky());
+stickyDiv.addEventListener("click",appendSticky);
 
 function appendSticky(elem){
+    console.log(elem);
     let sticky = document.createElement("div");
     sticky.classList.add("sticky");
-    if(elem){
+    if(!(elem.type == "click")){
         sticky.innerHTML = `<div class="sticky-header">
     <div class="minimize"></div>
     <div class="close"></div>
@@ -15,6 +16,7 @@ function appendSticky(elem){
     sticky.querySelector(".sticky-content").append(elem);
     }
     else{
+        console.log(elem);
     sticky.innerHTML = `<div class="sticky-header">
     <div class="minimize"></div>
     <div class="close"></div>

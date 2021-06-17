@@ -2,11 +2,11 @@ let canvas = document.querySelector("#canvas");
 let {top:canvasTop} = canvas.getBoundingClientRect();
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight-canvasTop-5;
+canvas.height = window.innerHeight-(canvasTop+5);
 
 window.addEventListener("resize",function(){
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight - canvasTop-5;
+    canvas.height = window.innerHeight - (canvasTop+5);
     redrawLine();
 })
 
@@ -41,7 +41,7 @@ canvas.addEventListener("mousedown",function(e){
 
 canvas.addEventListener("mousemove",function(e){
     if(isMouseDown){
-        let x = e.clientY;
+        let x = e.clientX;
         let y = e.clientY-canvasTop;
         ctx.lineTo(x,y);
         ctx.stroke();
@@ -49,7 +49,7 @@ canvas.addEventListener("mousemove",function(e){
         let pointObject = {
             type:"mm",
             x:x,
-            y:y
+            y:y,
         }
         line.push(pointObject);
     }
