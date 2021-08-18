@@ -75,7 +75,7 @@ async function sendMessage(links,page){
         })
         let msg = `Hi ${name} ! 
 I am Mohd Aman , a third year student pursuing B.tech from GGSIPU and Currenty looking for internship roles , My key skills are - Strong Problem Solving, C, C++, Java OOPs, DBMS.
-I have completed 730+ questions on leetcode.
+I have completed 800+ questions on leetcode.
 It will be great If you can refer me for this role 
 Job id - ${jobId}
 Link- ${jobLink}
