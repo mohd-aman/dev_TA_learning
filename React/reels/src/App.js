@@ -6,21 +6,20 @@ import {useEffect} from "react"
 import { firestore} from "./Firebase";
 
 function App() {
-  useEffect(()=>{
-    async function f(){
-      let querySnapshot = await firestore.collection("users").get();
-      console.log(querySnapshot.docs.length);
-      for(let i=0;i<querySnapshot.docs.length;i++){
-        console.log(querySnapshot.docs[i].data());
-      }
-    }
-    f();
-  },[]);
+  // useEffect(()=>{
+  //   async function f(){
+  //     let querySnapshot = await firestore.collection("users").get();
+  //     console.log(querySnapshot.docs.length);
+  //     for(let i=0;i<querySnapshot.docs.length;i++){
+  //       console.log(querySnapshot.docs[i].data());
+  //     }
+  //   }
+  //   f();
+  // },[]);
   
   return (
     <>
-    <h1>App</h1>
-  {/* <AuthProvider>
+  <AuthProvider>
     <Router>
       <Switch>
         <Route exact path = "/login">
@@ -31,7 +30,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </AuthProvider>     */}
+    </AuthProvider>    
     </>
   );
 }
