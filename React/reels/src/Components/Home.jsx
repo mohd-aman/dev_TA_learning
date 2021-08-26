@@ -10,7 +10,7 @@ let Home = ()=>{
     let user = useContext(authContext);
     let [posts,setPosts] = useState([]);
     useEffect(() => {
-        firestore.collection("posts").onSnapshot((querySnapshot)=>{
+       let unsub = firestore.collection("posts").onSnapshot((querySnapshot)=>{
             let docArr = querySnapshot.docs;
             let arr = [];
             for(let i=0;i<docArr.length;i++){
@@ -21,8 +21,10 @@ let Home = ()=>{
             }
             setPosts(arr);
         })
-        
-    }, [])
+        return ()=>{
+            unsub();
+        }
+    }, []);
     return(
         <>
         {user?"":<Redirect to="/login"/>}
