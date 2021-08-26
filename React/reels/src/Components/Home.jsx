@@ -3,19 +3,27 @@ import {auth} from "../Firebase";
 
 import { authContext } from "../AuthProvider";
 import { Redirect } from "react-router-dom";
+import VideoCard from "./videoCard";
+import "./home.css";
 
 let Home = ()=>{
     let user = useContext(authContext);
     return(
         <>
         {user?"":<Redirect to="/login"/>}
-        <h1>Home</h1>
-        <button onClick = {()=>{
-            auth.signOut();
-        }}>
-            LogOut
-        </button>
-        </>
+        <div className="video-container">
+        <VideoCard />
+      </div>
+
+      <button
+        className="home-logout-btn"
+        onClick={() => {
+          auth.signOut();
+        }}
+      >
+        Logout
+      </button>
+    </>
     );
 };
 
